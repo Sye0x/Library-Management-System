@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\View;
 class UserControls extends Controller
 {
     //
@@ -14,6 +14,11 @@ class UserControls extends Controller
         return view('Usersname',['name'=>$name]);
     }
     function nestedFile(){
-        return view('nest.admin');
+        if(view::exists('nest.admin')){
+            return view('nest.admin');
+        }else{
+            return "View not found";
+        }
+        
     }
 }
