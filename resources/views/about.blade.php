@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    @include('common.header',['name'=>'About'])
     <h1>About {{$name}}</h1>
     @foreach($users as $user)
     <h1>{{$user}}</h1>

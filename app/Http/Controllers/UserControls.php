@@ -21,4 +21,9 @@ class UserControls extends Controller
         }
         
     }
+    function userData(Request $req){
+        echo "User data added successfully";
+        echo $req->name;
+        
+    }
 }

@@ -22,3 +22,6 @@ Route::get('/nested',[userControls::class,'nestedFile']);
 Route::get('/myView/{name}',function($name){
     return view('myView',['name'=>$name]);
 });
+
+Route::view('/user-form','userform');
+Route::post('/adduser',[userControls::class,'userData']);
