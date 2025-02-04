@@ -13,4 +13,8 @@ class mycontroller extends Controller
     function showname($user){
         return view('welcome',['name'=>$user]);
     }
+    function passarray(){
+        $names = ["Raza","Hashir","Muneeb"];
+        return view('fold.hello',['names'=>$names]);
+    }
 }
